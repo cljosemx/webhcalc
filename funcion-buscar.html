@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Buscar - Hoja de Cálculo Excel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Preparatoria Oficial 124</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="buscar.html">Función Buscar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="funcion-si.html">Función SI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="funcion-si-auxiliares.html">Función SI con Y, O</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Función Buscar en Excel</h1>
+        
+        <section>
+            <h2>Introducción</h2>
+            <p>La función BUSCAR en Excel es una herramienta poderosa que te permite encontrar información específica en grandes conjuntos de datos. Esta función busca un valor en una lista o tabla y devuelve un valor correspondiente de otra columna o fila.</p>
+        </section>
+
+        <section class="mt-4">
+            <h2>Sintaxis</h2>
+            <pre><code>BUSCAR(valor_buscado, vector_de_comparación, [vector_resultado])</code></pre>
+            <ul>
+                <li><strong>valor_buscado:</strong> El valor que deseas encontrar.</li>
+                <li><strong>vector_de_comparación:</strong> El rango donde se buscará el valor.</li>
+                <li><strong>vector_resultado:</strong> (Opcional) El rango de donde se extraerá el resultado.</li>
+            </ul>
+        </section>
+
+        <section class="mt-4">
+            <h2>Ejemplo</h2>
+            <p>Supongamos que tienes una lista de productos con sus precios:</p>
+            <table class="table table-bordered">
+                <tr><th>Producto</th><th>Precio</th></tr>
+                <tr><td>Manzana</td><td>10</td></tr>
+                <tr><td>Pera</td><td>12</td></tr>
+                <tr><td>Naranja</td><td>8</td></tr>
+            </table>
+            <p>Para buscar el precio de la Pera, usarías:</p>
+            <pre><code>=BUSCAR("Pera", A2:A4, B2:B4)</code></pre>
+            <p>Esto devolvería 12.</p>
+        </section>
+
+        <section class="mt-4">
+            <h2>Ejercicios</h2>
+            <ol>
+                <li>Crea una tabla con nombres de estudiantes y sus calificaciones. Usa BUSCAR para encontrar la calificación de un estudiante específico.</li>
+                <li>Haz una lista de ciudades y sus poblaciones. Utiliza BUSCAR para encontrar la población de una ciudad dada.</li>
+                <li>Crea una tabla de conversión de monedas. Usa BUSCAR para convertir de una moneda a otra.</li>
+            </ol>
+        </section>
+
+        <section id="faq" class="mt-5">
+            <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+            <div class="accordion" id="accordionFAQ">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cuál es la diferencia entre BUSCAR y BUSCARV?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            BUSCAR es una función más antigua y simple, mientras que BUSCARV es más flexible y puede buscar en tablas más complejas. BUSCARV permite buscar verticalmente en la primera columna de un rango y devolver un valor de cualquier columna en la misma fila.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿BUSCAR distingue entre mayúsculas y minúsculas?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            No, la función BUSCAR no distingue entre mayúsculas y minúsculas. "Manzana" y "manzana" se tratarían como el mismo valor en la búsqueda.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-5">
+        <p>&copy; 2024 Preparatoria Oficial 124. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
